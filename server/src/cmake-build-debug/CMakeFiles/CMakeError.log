@@ -1,0 +1,55 @@
+Determining if the pthread_create exist failed with the following output:
+Change Dir: /home/systemmatic/CLionProjects/server/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_36c18/fast"
+/usr/bin/make -f CMakeFiles/cmTC_36c18.dir/build.make CMakeFiles/cmTC_36c18.dir/build
+make[1]: Entering directory '/home/systemmatic/CLionProjects/server/cmake-build-debug/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_36c18.dir/CheckSymbolExists.c.o
+/usr/bin/cc     -o CMakeFiles/cmTC_36c18.dir/CheckSymbolExists.c.o   -c /home/systemmatic/CLionProjects/server/cmake-build-debug/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTC_36c18
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_36c18.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTC_36c18.dir/CheckSymbolExists.c.o  -o cmTC_36c18 
+CMakeFiles/cmTC_36c18.dir/CheckSymbolExists.c.o: In function `main':
+CheckSymbolExists.c:(.text+0xa): undefined reference to `pthread_create'
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_36c18.dir/build.make:97: recipe for target 'cmTC_36c18' failed
+make[1]: *** [cmTC_36c18] Error 1
+make[1]: Leaving directory '/home/systemmatic/CLionProjects/server/cmake-build-debug/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_36c18/fast' failed
+make: *** [cmTC_36c18/fast] Error 2
+
+File /home/systemmatic/CLionProjects/server/cmake-build-debug/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <pthread.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef pthread_create
+  return ((int*)(&pthread_create))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /home/systemmatic/CLionProjects/server/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_da4d3/fast"
+/usr/bin/make -f CMakeFiles/cmTC_da4d3.dir/build.make CMakeFiles/cmTC_da4d3.dir/build
+make[1]: Entering directory '/home/systemmatic/CLionProjects/server/cmake-build-debug/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_da4d3.dir/CheckFunctionExists.c.o
+/usr/bin/cc    -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_da4d3.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.5/Modules/CheckFunctionExists.c
+Linking C executable cmTC_da4d3
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_da4d3.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_da4d3.dir/CheckFunctionExists.c.o  -o cmTC_da4d3 -lpthreads 
+/usr/bin/ld: cannot find -lpthreads
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_da4d3.dir/build.make:97: recipe for target 'cmTC_da4d3' failed
+make[1]: *** [cmTC_da4d3] Error 1
+make[1]: Leaving directory '/home/systemmatic/CLionProjects/server/cmake-build-debug/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_da4d3/fast' failed
+make: *** [cmTC_da4d3/fast] Error 2
+
+

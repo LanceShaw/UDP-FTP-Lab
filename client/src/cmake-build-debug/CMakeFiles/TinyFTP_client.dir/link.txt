@@ -1,0 +1,1 @@
+/usr/bin/cc  -g   CMakeFiles/TinyFTP_client.dir/client.c.o CMakeFiles/TinyFTP_client.dir/main.c.o CMakeFiles/TinyFTP_client.dir/CommandHandle.c.o CMakeFiles/TinyFTP_client.dir/common.c.o  -o TinyFTP_client 
